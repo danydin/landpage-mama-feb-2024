@@ -503,14 +503,16 @@ hr {
     display: none;
   }
 }
-@media only screen and (max-height: 920px) {
-  .mobile-image img {
-    max-height: 20rem;
-  }
-}
-@media only screen and (max-height: 850px) {
+
+@media only screen and (max-height: 1000px) {
   .container{
     height: 850px;
+  }
+}
+
+@media only screen and (min-height: 600px) {
+  .container{
+    height: 1050px;
   }
 }
 
@@ -520,15 +522,21 @@ hr {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 449px) {
   .container{
-    height: 800px;
+    height: 750px;
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (min-width: 450px) {
   .container{
-    height: 750px;
+    height: 850px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .container{
+    height: 950px;
   }
 }
 
