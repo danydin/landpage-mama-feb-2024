@@ -167,6 +167,7 @@ body {
 }
 .desktop-right .desktop-image img {
   width: 600px;
+  height: 100%;
 }
 
 .left-desktop-container {
@@ -616,6 +617,7 @@ input::placeholder {
 
   .mobile-image {
     justify-content: center;
+    margin-top: 50px;
   }
 
   .mobile-image img {
