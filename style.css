@@ -39,13 +39,14 @@
 }
 
 body {
-  background: url("./images/sky.webp") no-repeat center fixed;
+  background: url(./images/sky.webp) no-repeat center;
   background-size: 100% 100%;
   border: 8px solid white;
 }
 
 .container {
   width: 100%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -413,17 +414,6 @@ hr {
   border: none;
   width: 100%;
   margin-top: -15px;
-}
-
-.animate_opacity {
-  opacity: 0;
-  transform: translateY(-300px);
-  transition: opacity 0.9s, transform 0.9s;
-}
-
-.animate_opacity.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .footer {

@@ -32,8 +32,6 @@ $(document).ready(function () {
       clickCount = 0;
     }
   });
-
-  $('.animate_opacity').addClass('show');
 });
 
 
@@ -165,8 +163,14 @@ $(document).ready(function () {
     placeholder: "בחירת מרכז",
     // allowClear: true,
   });
-  $("#openDropdownButton").click(function () {
+  $("#openDropdownButton").click(function (e) {
     var $select2 = $("#input_3").data('select2');
+    if (e.target.classList.contains("select2-container--open")) {
+      $("#input_3").select2('close');
+    }
+    else if (e.target.classList.contains("select2-container")) {
+      $("#input_3").select2('open');
+    }
   });
   $("#input_3").on("change", function () {
     handleChange();
