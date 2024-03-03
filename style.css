@@ -532,12 +532,6 @@ hr {
   }
 }
 
-@media only screen and (min-width: 850px) {
-  .container{
-    height: 1100px;
-  }
-}
-
 @media only screen and (max-width: 999px) {
   .main-title-desktop,
   .desktop-right,
