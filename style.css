@@ -33,11 +33,6 @@ body {
 }
 
 @font-face {
-  font-family: FbSpoiler-Light;
-  src: url(./fonts/FbSpoiler-Light.otf);
-}
-
-@font-face {
   font-family: AdobeHebrew-Regular;
   src: url(./fonts/AdobeHebrew-Regular.otf);
 }
@@ -155,7 +150,6 @@ body {
 .midSection {
   display: flex;
   justify-content: space-around;
-  height: 100%;
 }
 
 .desktop-right {
@@ -171,12 +165,7 @@ body {
   font-family: "FbSpoiler-Bold";
 }
 
-.desktop-right .desktop-image {
-  margin-top: 165px;
-}
-
 .desktop-right .desktop-image img {
-  height: 360px;
   width: 100%;
 }
 
@@ -382,6 +371,7 @@ input::placeholder {
 .select2-container--default .select2-selection--single {
   background-color: transparent !important;
   border: none !important;
+  outline: none !important;
 }
 
 .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
@@ -441,6 +431,7 @@ hr {
   border-bottom: 0.6rem solid white;
   height: 20rem;
   top: -1rem;
+  border-top: 10px solid #fff;
 }
 
 .footer .logo-container {
@@ -519,9 +510,34 @@ hr {
 }
 @media only screen and (max-height: 850px) {
   .container{
-    height: 50rem;
+    height: 850px;
   }
 }
+
+@media only screen and (max-height: 500px) {
+  .container{
+    height: 850px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container{
+    height: 7500px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container{
+    height: 750px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .container{
+    height: 1100px;
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .main-title-desktop,
   .desktop-right,
@@ -713,7 +729,7 @@ hr {
     white-space: nowrap;
   }
 }
-@media only screen and (max-width: 400px){
+/* @media only screen and (max-width: 400px){
   .main-title-mobile h1{
     font-size: 15px;
   }
@@ -749,5 +765,5 @@ hr {
     border-left: 0.3rem solid white;
     border-right: 0.3rem solid white;
     border-bottom: 0.3rem solid white;
-  }
-}
+  } 
+} */
