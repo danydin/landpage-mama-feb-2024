@@ -3,7 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body {
+  overflow: auto;
+  white-space: wrap;
+  word-break: break-word;
+}
 :root {
   --primary-color: #014282;
 }
@@ -39,9 +43,8 @@
 }
 
 body {
-  background: url(./images/sky.webp) no-repeat center;
+  background: url("./images/sky.webp") no-repeat center fixed;
   background-size: 100% 100%;
-  border: 8px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,10 +54,12 @@ body {
 .container {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: .6rem solid white;
 }
 
 .black-font {
@@ -139,7 +144,7 @@ body {
 }
 
 .main-title-desktop h1 {
-  font-size: 95px;
+  font-size: 80px;
   color: white;
   font-family: "FbSpoiler-Black";
   letter-spacing: 2px;
@@ -150,7 +155,7 @@ body {
 .midSection {
   display: flex;
   justify-content: space-around;
-  padding: 0;
+  height: 100%;
 }
 
 .desktop-right {
@@ -165,16 +170,22 @@ body {
   font-size: 35px;
   font-family: "FbSpoiler-Bold";
 }
+
+.desktop-right .desktop-image {
+  margin-top: 165px;
+}
+
 .desktop-right .desktop-image img {
-  width: 600px;
-  height: 100%;
+  height: 360px;
+  width: 100%;
 }
 
 .left-desktop-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  margin-bottom: 3rem;
 }
 
 .hero-container {
@@ -187,7 +198,7 @@ body {
 
 .hero-title {
   color: var(--primary-color);
-  font-size: 35px;
+  font-size: 32px;
   text-align: center;
   font-family: FbSpoiler-bold;
   white-space: nowrap;
@@ -202,13 +213,12 @@ body {
 
 .hero-subtitle {
   color: var(--primary-color);
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   font-family: "FbSpoiler-Regular";
   padding-top: 6px;
   white-space: nowrap;
 }
-
 
 .prize-container {
   width: 100%;
@@ -222,7 +232,7 @@ body {
 
 .hero-container .prize-container h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   white-space: nowrap;
   letter-spacing: 1px;
 }
@@ -230,11 +240,11 @@ body {
 .hero-container .line {
   width: 60%;
   border-top: 2px solid white;
-  margin: 5px 0;
+  margin: 2px 0;
 }
 
 .hero-container .line:nth-child(1) {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .card {
@@ -410,6 +420,15 @@ input::placeholder {
   font-family: FbSpoiler-Bold;
 }
 
+hr {
+  color: white;
+  height: 10px;
+  background-color: white;
+  border: none;
+  width: 100%;
+  margin-top: -15px;
+}
+
 .footer {
   background-color: rgb(78, 163, 78);
   display: flex;
@@ -417,7 +436,11 @@ input::placeholder {
   justify-content: center;
   row-gap: 10px;
   position: relative;
-  border-top: 12px solid #fff;
+  border-left: 0.6rem solid white;
+  border-right: 0.6rem solid white;
+  border-bottom: 0.6rem solid white;
+  height: 20rem;
+  top: -1rem;
 }
 
 .footer .logo-container {
@@ -477,12 +500,11 @@ input::placeholder {
 }
 
 .contact-tel:hover {
-  color: #C1D833;
+  color: #c1d833;
   cursor: pointer;
 }
 
 @media only screen and (min-width: 1000px) {
-
   .main-title-mobile,
   .mobile-hero-solgan,
   .mobile-image,
@@ -490,9 +512,17 @@ input::placeholder {
     display: none;
   }
 }
-
+@media only screen and (max-height: 920px) {
+  .mobile-image img {
+    max-height: 20rem;
+  }
+}
+@media only screen and (max-height: 850px) {
+  .container{
+    height: 50rem;
+  }
+}
 @media only screen and (max-width: 999px) {
-
   .main-title-desktop,
   .desktop-right,
   .desktop-left-content,
@@ -539,7 +569,7 @@ input::placeholder {
     flex-direction: column;
   }
 
-  .center-mobile-container{
+  .center-mobile-container {
     margin-top: 0;
   }
 
@@ -617,7 +647,8 @@ input::placeholder {
 
   .mobile-image {
     justify-content: center;
-    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: -20px;
   }
 
   .mobile-image img {
@@ -680,5 +711,43 @@ input::placeholder {
     text-align: center;
     font-weight: lighter;
     white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 400px){
+  .main-title-mobile h1{
+    font-size: 15px;
+  }
+  .mobile-hero-solgan h1{
+    font-size: 22px;
+  }
+  .hero-title{
+    font-size: 20px;
+  }
+  .hero-subtitle{
+    font-size: 20px;
+  }
+  .card input{
+    font-size: 20px;
+  }
+  .select2{
+    font-size: 20px;
+  }
+  .card button{
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    border: .3rem solid white;
+  }
+  .card{
+    display: flex;
+    gap: 5px;
+  }
+  .footer{
+    border-left: 0.3rem solid white;
+    border-right: 0.3rem solid white;
+    border-bottom: 0.3rem solid white;
   }
 }
