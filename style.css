@@ -167,7 +167,7 @@ body {
   font-family: "FbSpoiler-Bold";
 }
 .desktop-right .desktop-image img {
-  width: 100%;
+  width: 600px;
 }
 
 .left-desktop-container {
@@ -617,8 +617,6 @@ input::placeholder {
 
   .mobile-image {
     justify-content: center;
-    margin-left: 10px;
-    margin-bottom: -20px;
   }
 
   .mobile-image img {
